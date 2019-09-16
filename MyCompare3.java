@@ -12,13 +12,21 @@ public class MyCompare3 {
 		dogs.add(new Dog("Fido", 3));
 		dogs.add(new Dog("Alfie", 4));
 
-		System.out.println(dogs);
+		//System.out.println(dogs);
+		for(Dog i : dogs){
+			System.out.println(i.name+" has "+ i.legs +" legs");
+		}
+		
 		Collections.sort(dogs, new Comparator<Animal>() {
 			@Override
 			public int compare(Animal a, Animal b){
 			    return a.getLegs() - b.getLegs();
 			}
 		});
-		System.out.println(dogs);
+		
+		//System.out.println(dogs);
+		for(Dog i : dogs){
+			System.out.println(i.name+" has "+ i.legs +" legs");
+		}
 	}
 }
